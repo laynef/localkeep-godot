@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://sage_dock"]
+[gd_scene load_steps=2 format=3 uid="uid://lk_dock"]
 
-[ext_resource type="Script" path="res://addons/sage_ai/sage_dock.gd" id="1"]
+[ext_resource type="Script" path="res://addons/local_keep_ai/lk_dock.gd" id="1"]
 
-[node name="SageDock" type="Control"]
+[node name="LocalKeepDock" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,7 +34,7 @@ layout_mode = 2
 [node name="Input" type="LineEdit" parent="VBox/InputRow"]
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Ask Sage anything about your game..."
+placeholder_text = "Ask LocalKeep anything about your game..."
 
 [node name="SendBtn" type="Button" parent="VBox/InputRow"]
 layout_mode = 2

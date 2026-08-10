@@ -1,5 +1,5 @@
 @tool
-class_name SageClient
+class_name LocalKeepClient
 extends RefCounted
 
 const CANDIDATE_PATHS := [
@@ -19,7 +19,7 @@ static func find_binary() -> String:
 			return p
 	# Try `which sage`
 	var output := []
-	OS.execute("which", ["sage"], output, true)
+	OS.execute("which", ["lk"], output, true)
 	var result: String = output[0].strip_edges() if output.size() > 0 else ""
 	if result != "" and FileAccess.file_exists(result):
 		return result
@@ -46,7 +46,7 @@ static func read_default_model() -> String:
 static func run_async(args: PackedStringArray, cwd: String, callback: Callable) -> void:
 	var binary := find_binary()
 	if binary == "":
-		callback.call(-1, "sage not found.\nInstall: pip install sage-ai-cli && sage login")
+		callback.call(-1, "sage not found.\nInstall: pip install local-keep-ai-cli && sage login")
 		return
 	var full_args := PackedStringArray([binary])
 	full_args.append_array(args)
