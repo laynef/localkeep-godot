@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/laynef/localkeep-godot/main/icon.png" width="96" alt="Local Keep AI" />
+</p>
+
 # Local Keep AI for Godot 4
 
 Local-first AI coding assistant for Godot 4 game development — explain GDScript,
